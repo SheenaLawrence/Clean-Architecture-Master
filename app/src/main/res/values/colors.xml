@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="headingTextcolor">#000099</color>
     <color name="cardBackground">#e0e0e0</color>
+    <color name="newsTextcolor">#000000</color>
 </resources>
