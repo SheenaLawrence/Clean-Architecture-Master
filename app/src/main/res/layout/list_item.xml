@@ -26,6 +26,7 @@
             >
 
             <TextView
+                android:id="@+id/newsHaedingtextview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/heading"
@@ -52,7 +53,7 @@
                     android:textColor="@color/newsTextcolor"
                     android:textSize="@dimen/news_text_size"
                     card_view:fontFamily="@font/abhaya_libre_bold"
-                    android:id="@+id/cityNametextView"
+                    android:id="@+id/newstextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/city"
@@ -69,6 +70,7 @@
                 >
 
                 <ImageView
+                    android:id="@+id/newsImage"
                     android:scaleType="fitXY"
                     android:layout_width="@dimen/news_image_width"
                     android:layout_height="@dimen/news_image_height"
