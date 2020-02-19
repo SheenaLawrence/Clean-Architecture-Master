@@ -9,6 +9,7 @@ import android.util.Log;
 
 import com.example.cleanarchitecturemaster.Adapter.NewsListAdapter;
 import com.example.cleanarchitecturemaster.Model.NewsRes;
+import com.example.cleanarchitecturemaster.Model.Row;
 import com.example.cleanarchitecturemaster.Presenter.GetDataContract;
 import com.example.cleanarchitecturemaster.Presenter.ListPresenter;
 import com.example.cleanarchitecturemaster.R;
@@ -33,7 +34,7 @@ public class ListActivity extends AppCompatActivity implements GetDataContract.V
         recyclerView.setLayoutManager(linearLayoutManager);
     }
     @Override
-    public void onGetDataSuccess(String message, List<NewsRes> list) {
+    public void onGetDataSuccess(String message, List<Row> list) {
         newsListAdapter = new NewsListAdapter(getApplicationContext(), list);
         recyclerView.setAdapter(newsListAdapter);
     }

@@ -5,6 +5,6 @@ import retrofit2.http.GET;
 
 public interface AllNewsResponse {
     @GET("/s/2iodh4vg0eortkl/facts.json")
-    Call<News> getNews();
+    Call<NewsRes> getNews();
 
 }

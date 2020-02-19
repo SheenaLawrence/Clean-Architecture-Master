@@ -10,7 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.cleanarchitecturemaster.Model.NewsRes;
+import com.example.cleanarchitecturemaster.Model.Row;
 import com.example.cleanarchitecturemaster.R;
 
 import java.util.ArrayList;
@@ -19,9 +21,9 @@ import java.util.List;
 public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.MyViewHolder> {
 
     private Context context;
-    private List<NewsRes> list =new ArrayList<>();
+    private List<Row> list =new ArrayList<>();
 
-    public NewsListAdapter(Context context, List<NewsRes> newslist)
+    public NewsListAdapter(Context context, List<Row> newslist)
     {
         this.context=context;
         this.list=newslist;
@@ -39,12 +41,16 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         holder.newsHeadingText.setText(list.get(position).getTitle());
+        holder.newsText.setText(list.get(position).getDescription());
+
+        Glide.with(context).load(list.get(position).getImageHref()).into(holder.newsImage);
+
 
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        return list.size();
     }
 
 

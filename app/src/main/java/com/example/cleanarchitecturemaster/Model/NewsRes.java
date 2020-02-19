@@ -1,11 +1,18 @@
 package com.example.cleanarchitecturemaster.Model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NewsRes {
 
     private String title;
-    ArrayList<Object> rows = new ArrayList<Object>();
+    List<Row> rows = new ArrayList<Row>();
+
+    public List<Row> getRows() {
+        return rows;
+    }
+
+
 
 
     // Getter Methods

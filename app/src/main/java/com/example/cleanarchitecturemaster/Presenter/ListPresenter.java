@@ -3,6 +3,7 @@ package com.example.cleanarchitecturemaster.Presenter;
 import android.content.Context;
 
 import com.example.cleanarchitecturemaster.Model.NewsRes;
+import com.example.cleanarchitecturemaster.Model.Row;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class ListPresenter implements GetDataContract.listPresenter,GetDataContr
     }
 
     @Override
-    public void onSuccess(String message, List<NewsRes> list) {
+    public void onSuccess(String message, List<Row> list) {
 
         mGetDataView.onGetDataSuccess(message, list);
 
